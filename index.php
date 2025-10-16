@@ -7,6 +7,18 @@
     </head>
     <body>
 
+<div class="lin">
+<div class="def">
+<nav class="navigator">
+    <ul>
+        <li class="fine"><a href="ret.php" class="rep">report</a></li>
+    </ul>
+</nav>
+</div>
+</div>
+
+
+
 <div class="home-cont">
     <div class="gre">
    <div class="hello"><h1 class="add">ADD NEW STUDENT</h1></div>
