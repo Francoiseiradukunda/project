@@ -3,18 +3,27 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="ret.css">
+        <link rel="stylesheet" type="text/css" href="ret.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="def">
+<nav class="navigator">
+    <ul>
+        <li class="fine"><a href="index.php" class="rep">Add</a></li>
+    </ul>
+</nav>
+</div>
+</div>
         <h3 align="center" class="about">LIST OF STUDENT</h3>
         <table class="tbl" border="2">
 <tr>
-    <td>NAMES</td>
-    <td>REGISTRATION NUMBER</td>
-     <td>GENDER</td>
-     <td>PROGRAM</td>
-     <td>Update</td>
-      <td>Delete</td>
+    <td class="hope">NAMES</td>
+    <td class="hope">REG NUMBER</td>
+     <td class="hope">GENDER</td>
+     <td class="hope">PROGRAM</td>
+     <td class="hope">UPDATE</td>
+      <td class="hope">DELETE</td>
 </tr>
 <?php
 $read="select * from studentlist";
@@ -27,10 +36,10 @@ while($row=$res->fetch_assoc()){
  <td>".$row['gender']."</td>
  <td>".$row['program']."</td>
  
-<td>
-    <a class='update' href='ret.php?regno=".$row['regno']."'>Update</a>
+<td class='laser'>
+    <a class='update' href='update.php?regno=".$row['regno']."'>Update</a>
 </td>
-<td>
+<td class='laserr'>
     <a class='delete' href='ret.php?regno=".$row['regno']."'>Delete</a>
 </td>
 
