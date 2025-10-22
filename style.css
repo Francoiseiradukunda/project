@@ -1,13 +1,17 @@
-body {
+* {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
   /* background-color: rgba(0, 255, 255, 0.555); */
 }
 
-.home-cont {
-  height: 89vh;
-  background-color: skyblue;
+.home-re {
+  height: 100vh;
+  background-color: rgba(135, 207, 235, 0.911);
+}
+
+.navigator {
+  padding: 20px;
 }
 
 .home-cont1 {
@@ -55,6 +59,8 @@ fieldset {
   color: white;
   padding: 2px;
   margin-left: 20px;
+  font-weight: 100;
+
 }
 
 .her {

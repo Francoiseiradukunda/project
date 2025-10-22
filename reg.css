@@ -1,0 +1,67 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.home-cont-reg {
+    background-color: skyblue;
+    height: 100vh;
+}
+
+.herr {
+    display: flex;
+    gap: 40px;
+}
+
+.input-seconds-address {
+    padding: 10px;
+    width: 380px;
+}
+
+.homm {
+    display: flex;
+    gap: 80px;
+    margin-top: 15px;
+}
+
+.homme {
+    display: flex;
+    gap: 65px;
+    margin-top: 15px;
+}
+
+.homn {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.labeli-secondss {
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.heyy {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.input2-seconds {
+    padding: 10px;
+    width: 380px;
+}
+
+.comm {
+    margin-top: 15px;
+    display: flex;
+    gap: 83px;
+}
+
+.input0-seconds {
+    padding: 10px;
+    width: 380px;
+}

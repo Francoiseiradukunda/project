@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-
+<div class="home-re">
 <div class="lin">
 <div class="def">
 <nav class="navigator">
@@ -94,6 +94,7 @@ else{
 
 ?>
 
+</div>
 </div>
     </body>
 </html>
