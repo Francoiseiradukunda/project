@@ -1,5 +1,7 @@
 <?php include("conn.php");?>
 
+<?php include("session.php");?>
+
 <html>
     <head>
         <title></title>

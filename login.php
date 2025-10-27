@@ -1,10 +1,11 @@
+session_start();
 <?php include("conn.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
       <link rel="stylesheet" type="text/css" href="reg.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   
@@ -34,45 +35,35 @@
 <br></div>
 </div>
 
-<div class="homn">
-<div><label for="" class="labeli-secondss">confirm password</label> </div>
-<div><input type="password" class="input2-seconds" placeholder="please re-write your password" name="cpwd" required>
-<br></div>
-</div>
 
 <div class="btn">
     <div ><button type="submit" value="Add" name="send" class="btn1">Login</button></div>
 <div><button type="reset" value="Cancel" name="cancel" class="btn2">Cancel</button></div>
 </div>
     </form>
-</fieldset>
+</fieldset> 
+
 </div>
 
 <?php
-if(isset($_GET['id'])){
-$id=$GET['id']
+if(isset($_GET['send'])){
+    session_start();
 $email=$_GET['email'];
 $pwd=$_GET['pwd'];
-$cpwd=$_GET['cpwd'];
-
-if($pwd!=$cpwd){
-     echo "<p style='color:red; text-align:center;'>❌ Passwords do not match! Please try again.</p>";
-}
-else{
     $hashed= password_hash($pwd, PASSWORD_DEFAULT);
-    $ins=mysqli_query($conn,"SELECT FROM reg $email,$pwd,$cpwd WHERE id='$id'
-    );
+    $ins=mysqli_query($conn,"SELECT * FROM reg  WHERE email='email' AND pwd='$pwd' ");
+
+    $row=mysqli_fetch_assoc($ins);
+    $_SESSION['email']=$row['email'];
+    $_SESSION['password']=$row['pwd'];
     if($ins){
-        header("location:ret.php");
+        header("location:index.php");
     }
     else{
         echo "<p style='color:red; text-align:center;'>❌ Registration failed. Please try again.</p>";
     }
-}
-
-}
-
+};
 ?>
-
+<p align="center" class="par">if you don't have account <a href="reg.php">Register</a></p>
 </body>
 </html>

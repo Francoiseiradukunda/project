@@ -100,6 +100,6 @@ else{
 }
 
 ?>
-
+<p align="center" class="par">if you have account <a href="login.php">Login</a></p>
 </body>
 </html>
