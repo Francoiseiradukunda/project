@@ -25,26 +25,26 @@ if (isset($_GET['regno'])) {
 }
 
 // ✅ When the form is submitted
-if (isset($_POST['update'])) {
-    $name = $_POST['name'];
-    $regno = $_POST['regno'];
-    $gender = $_POST['gender'];
-    $program = $_POST['program'];
+// if (isset($_POST['update'])) {
+//     $name = $_POST['name'];
+//     $regno = $_POST['regno'];
+//     $gender = $_POST['gender'];
+//     $program = $_POST['program'];
 
-    $update = mysqli_query($conn, "UPDATE studentlist SET 
-        names='$name',
-        gender='$gender',
-        program='$program'
-        WHERE regno='$regno'");
+//     $update = mysqli_query($conn, "UPDATE studentlist SET 
+//         names='$name',
+//         gender='$gender',
+//         program='$program'
+//         WHERE regno='$regno'");
 
-    if ($update) {
-        echo "<p class='succ'>✅ Student record updated successfully!</p>";
-        echo "<script>window.location='ret.php';</script>"; // ✅ JavaScript redirect
-    } else {
-        echo "<p style='color:red;'>❌ Update failed. Please try again.</p>";
-    }
-}
-?>
+//     if ($update) {
+//         echo "<p class='succ'>✅ Student record updated successfully!</p>";
+//         echo "<script>window.location='ret.php';</script>"; // ✅ JavaScript redirect
+//     } else {
+//         echo "<p style='color:red;'>❌ Update failed. Please try again.</p>";
+//     }
+// }
+// ?>
 
 <!DOCTYPE html>
 <html>

@@ -1,4 +1,4 @@
-session_start();
+
 <?php include("conn.php");?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ session_start();
     <legend class="leg1">fill here</legend>
 
 
-    <form class="formm" method="GET">
+    <form class="formm" method="POST">
 
 <div class="homm">
 <div><label for="" class="labeli seconds">Email</label> </div>
@@ -40,22 +40,22 @@ session_start();
     <div ><button type="submit" value="Add" name="send" class="btn1">Login</button></div>
 <div><button type="reset" value="Cancel" name="cancel" class="btn2">Cancel</button></div>
 </div>
-    </form>
-</fieldset> 
 
-</div>
 
 <?php
-if(isset($_GET['send'])){
-    session_start();
-$email=$_GET['email'];
-$pwd=$_GET['pwd'];
+session_start();
+
+if(isset($_POST['send'])){
+$email=$_POST['email'];
+$pwd=$_POST['pwd'];
     $hashed= password_hash($pwd, PASSWORD_DEFAULT);
-    $ins=mysqli_query($conn,"SELECT * FROM reg  WHERE email='email' AND pwd='$pwd' ");
+    $ins=mysqli_query($conn,"SELECT * FROM reg  WHERE email='$email' AND pwd='$pwd' ");
 
     $row=mysqli_fetch_assoc($ins);
     $_SESSION['email']=$row['email'];
     $_SESSION['password']=$row['pwd'];
+     $_SESSION['fname']=$row['fname'];
+      $_SESSION['lname']=$row['lname'];
     if($ins){
         header("location:index.php");
     }
@@ -64,6 +64,9 @@ $pwd=$_GET['pwd'];
     }
 };
 ?>
-<p align="center" class="par">if you don't have account <a href="reg.php">Register</a></p>
-</body>
+
+    </form>
+</fieldset> 
+
+</div><p align="center" class="par">if you don't have account <a href="reg.php">Register</a></p></body>
 </html>
