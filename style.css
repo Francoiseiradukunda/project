@@ -202,3 +202,9 @@ fieldset {
   background-color: rgba(0, 0, 0, 0.767);
   border-radius: 9PX;
 }
+
+.logout {
+  background-color: black;
+  padding: 5px;
+  color: white;
+}

@@ -13,6 +13,7 @@
     
 <div class="home-cont-reg">
     <div class="gre">
+        
    <div class="hello"><h1 class="add">register form</h1></div>
 </div>
 <div class="home-cont1">

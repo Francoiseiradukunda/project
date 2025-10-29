@@ -1,4 +1,5 @@
 <?php include("conn.php");?>
+
 <?php
 // ✅ Always connect to the database first
 
@@ -61,7 +62,17 @@ if (isset($_GET['regno'])) {
         </ul>
     </nav>
 </div>
+<?php
 
+session_start();
+if(strlen($_SESSION['email'])==0){
+    header("location:login.php");
+}
+?>
+<a href="logout.php">logout</a>
+<?php
+echo "welcome"." ". $_SESSION['fname']." ".$_SESSION['lname'];
+?>
 <form method="POST" class="">
     <fieldset>
         <legend class="leg1">Update Student Member</legend>

@@ -1,7 +1,4 @@
 <?php include("conn.php");?>
-
-<?php include("session.php");?>
-
 <html>
     <head>
         <title></title>
@@ -14,8 +11,18 @@
     <ul>
         <li class="fine"><a href="index.php" class="rep">Add</a></li>
     </ul>
-</nav>
+</nav><?php
+session_start();
+if(strlen($_SESSION['email'])==0){
+    header("location:login.php");
+}
+?>
+<a href="logout.php" class="logout">logout</a>
+<?php
+echo "welcome"." ". $_SESSION['fname']." ".$_SESSION['lname'];
+?>
 </div>
+
 </div>
         <h3 align="center" class="about">LIST OF STUDENT</h3>
         <table class="tbl" border="2">

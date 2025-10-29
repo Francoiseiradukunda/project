@@ -48,15 +48,13 @@ session_start();
 if(isset($_POST['send'])){
 $email=$_POST['email'];
 $pwd=$_POST['pwd'];
-    $hashed= password_hash($pwd, PASSWORD_DEFAULT);
     $ins=mysqli_query($conn,"SELECT * FROM reg  WHERE email='$email' AND pwd='$pwd' ");
-
-    $row=mysqli_fetch_assoc($ins);
-    $_SESSION['email']=$row['email'];
+if(mysqli_num_rows($ins) > 0 ){
+   $row=mysqli_fetch_assoc($ins);
+   $_SESSION['email']=$row['email'];
     $_SESSION['password']=$row['pwd'];
      $_SESSION['fname']=$row['fname'];
       $_SESSION['lname']=$row['lname'];
-    if($ins){
         header("location:index.php");
     }
     else{
