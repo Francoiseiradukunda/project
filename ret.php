@@ -7,20 +7,21 @@
     </head>
     <body>
         <div class="def">
-<nav class="navigator">
-    <ul>
-        <li class="fine"><a href="index.php" class="rep">Add</a></li>
-    </ul>
-</nav><?php
+            <?php
 session_start();
 if(strlen($_SESSION['email'])==0){
     header("location:login.php");
 }
 ?>
-<a href="logout.php" class="logout">logout</a>
+
 <?php
 echo "welcome"." ". $_SESSION['fname']." ".$_SESSION['lname'];
-?>
+?><a href="logout.php" class="logoutt">logout</a>
+<nav class="navigator">
+    <ul>
+        <li class="fine"><a href="index.php" class="rep">Add</a></li>
+    </ul>
+</nav>
 </div>
 
 </div>
