@@ -1,0 +1,34 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.home-comee {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.959);
+}
+
+.home-come3 {
+    background-image: url('./images/remover.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.homee {
+
+    width: 50%;
+    padding: 15px;
+    margin-top: 10%;
+    margin-left: 20px;
+}
+
+.about-par {
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 20px;
+}

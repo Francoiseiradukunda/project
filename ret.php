@@ -24,6 +24,29 @@ echo "welcome"." ". $_SESSION['fname']." ".$_SESSION['lname'];
 </nav>
 </div>
 
+<form action="" method="GET">
+<input type="text" name="regno" placeholder="search">
+<button type="submit" name="send">search</button>
+</form>
+<?php
+$search="";
+if(isset($_GET['send'])){
+    $regno=$_GET['regno'];
+
+    if(!empty($regno)){
+           $search="SELECT * FROM studentlist WHERE regno LIKE '%$regno%'";
+    }
+    else{
+        $search="SELECT * FROM studentlist";
+    }
+ 
+}
+else{
+    $search="SELECT * FROM studentlist";
+}
+$res=$conn->query($search);
+?>
+
 </div>
         <h3 align="center" class="about">LIST OF STUDENT</h3>
         <table class="tbl" border="2">
@@ -59,9 +82,9 @@ while($row=$res->fetch_assoc()){
        
 
         <?php 
-        if(isset($_GET['regno'])){
+        if(isset($_GET['delete'])){
 
-        $regno=$_GET['regno'];
+        $dele=$_GET['delete'];
         
               $del=mysqli_query($conn," DELETE FROM studentlist WHERE regno='$regno'"); 
               if($del==true){
