@@ -14,6 +14,8 @@ if(strlen($_SESSION['email'])==0){
 }
 ?>
 
+<button onclick="window.print()">print this page</button>
+
 <?php
 echo "welcome"." ". $_SESSION['fname']." ".$_SESSION['lname'];
 ?><a href="logout.php" class="logoutt">logout</a>
@@ -46,7 +48,7 @@ else{
 }
 $res=$conn->query($search);
 ?>
-
+<button></button>
 </div>
         <h3 align="center" class="about">LIST OF STUDENT</h3>
         <table class="tbl" border="2">

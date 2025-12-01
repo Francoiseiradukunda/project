@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="cont.css">
 </head>
 <body>
 <div class="home-comes">
@@ -23,7 +24,18 @@
         <div class="nex-home">
             <div class="home2">
                 <div class="homess">
-           <p class="contact-par"></p>
+                     <fieldset class="contact-formm">
+           <form action="" method="POST">
+           <input type="text" placeholder="first name" name="fname"><br>
+           <input type="text" placeholder="last name" name="lname"><br>
+           <input type="text" placeholder="address" name="address"><br>
+           <input type="radio" placeholder="gender" name="gender" value="Male">Male
+           <input type="radio" placeholder="gender" name="gender" value="Female">Female<br>
+           <input type="text" placeholder="phone number" name="phone"><br>
+           <input type="text" placeholder="email" name="email"><br>
+          <button type="submit" name="send">send</button>          
+           </form>
+         </fieldset>
                   </div>
 
             </div>
