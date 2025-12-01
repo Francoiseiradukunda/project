@@ -5,14 +5,53 @@
 }
 
 .home-comes {
-    background-color: rgba(0, 0, 0, 0.911);
+
     height: 100vh;
 }
 
 .home-comess {
     height: 100%;
-    background-image: url('./images/text.jpg');
+    background-image: url('./images/irya.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.contact-formm {
+    background-color: rgba(0, 0, 0, 0.658);
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin-left: 25px;
+    height: 520px;
+    border-radius: 3px;
+    border: solid 0 3px;
+}
+
+.comeent {
+    /* background-color: red; */
+    padding: 3px;
+    height: 100%;
+}
+
+.cont-put {
+    /* background-color: blue; */
+    width: 400px;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    border-radius: 3px;
+    /* color: white; */
+}
+
+.cont-butt {
+    width: 400px;
+    padding: 10px;
+    margin: 20px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
 }

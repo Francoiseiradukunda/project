@@ -14,6 +14,7 @@
                 <ul class="home-nav">
                     <li class="list-home"><a href="home.php" class="archor-home">home</a></li>
                     <li class="list-home"><a href="about.php" class="archor-home">about-us</a></li>
+                    <li class="list-home"><a href="about.php" class="archor-home">contact-us</a></li>
                     <li class="list-home"><a href="reg.php" class="archor-home">sign-in</a></li>
                     <li class="list-home"><a href="login.php" class="archor-home">login</a></li>
                 </ul>
